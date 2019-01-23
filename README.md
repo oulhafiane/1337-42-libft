@@ -2,14 +2,14 @@
 During my curriculum, it is forbidden to use pre-compiled functions, only some of them are allowed on each project, for example printf not authorized and all the functions of the string.h library.  
 Libft is the first project of the curriculum that requires in the first part to re-code a set of libc functions, as defined in their manual, and in the second part to code a set of functions that are not included in the libc and the bonus part to code certain functions to deal with the linked list, after that you can use this library for the following projects and you can also add more useful functions.
 
-[For more info about the project click here](https://github.com/oulhafiane/1337-42-libft/blob/master/libft.en.pdf)
+[For more info about the project click here](https://github.com/oulhafiane/1337-42-libft/blob/master/resources/libft.en.pdf)
 
-## First Part
-##### We must re-code the following functions :  
+![First Part](https://github.com/oulhafiane/1337-42-libft/blob/master/resources/first_part.png?raw=true)
+### We must re-code the following functions :  
 memset, bzero, memcpy, memccpy, memmove, memchr, memcmp, strlen, strdup, strcpy, strncpy, strcat, strncat, strlcat, strchr, strrchr, strstr, strnstr, strcmp, strncmp, atoi, isalpha, isdigit, isalnum, isascii, isprint, toupper, tolower.
 
-## Second Part
-##### We must code the following functions : 
+![Second Part](https://github.com/oulhafiane/1337-42-libft/blob/master/resources/second_part.png?raw=true)
+### We must code the following functions : 
 
 #### ft_memalloc
 Allocates (with malloc(3)) and returns a “fresh” memory
@@ -92,8 +92,8 @@ Outputs the string s to the file descriptor fd followed by a ’\n’.
 #### ft_putnbr_fd
 Outputs the integer n to the file descriptor fd.
 
-## Bonus Part
-##### We must code the following functions :  
+![Bonus Part](https://github.com/oulhafiane/1337-42-libft/blob/master/resources/bonus_part.png?raw=true)
+### We must code the following functions :  
 
 #### ft_lstnew
 Allocates (with malloc(3)) and returns a “fresh” link. The
@@ -126,58 +126,59 @@ Iterates the list lst and applies the function f to each link.
 Iterates a list lst and applies the function f to each link to
 create a “fresh” list (using malloc(3)) resulting from the successive applications of f. If the allocation fails, the function returns NULL.
 
-## Other Functions
-##### Whenever i work on a new project, i need to add some useful functions to my library
+![Other functions](https://github.com/oulhafiane/1337-42-libft/blob/master/resources/others.png?raw=true)
+### Whenever i work on a new project, i need to add some useful functions to my library
 
-#### int  get_next_line(const int fd, char \*\*line);
+#### int&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;get_next_line(const int fd, char \*\*line);
 Read from a file descriptor line by line.  
-It's a project on my curriculum [click here for more info](https://github.com/oulhafiane/1337-42-libft/blob/master/get_next_line.en.pdf)
+It's a project on my curriculum [click here for more info](https://github.com/oulhafiane/1337-42-libft/blob/master/resources/get_next_line.en.pdf)
 
-#### int  free_gnl(int fd); 
+#### int&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;free_gnl(int fd); 
 Deallocates the allocated memory by get_next_line for the specific file descriptor given.
 
-#### int  ft_printf(const char \*format, ...);
+#### int&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ft_printf(const char \*format, ...);
 I recoded the famous function called printf from the library stdio.h.  
 I managed the following conversions : sSpdDioOuUxXcC.  
 I managed the following flags : hh, h, l, ll, j, et z, #, 0, -, +, * and space.  
-It's a project on my curriculum [click here for more info](https://github.com/oulhafiane/1337-42-libft/blob/master/ft_printf.en.pdf)
+It's a project on my curriculum [click here for more info](https://github.com/oulhafiane/1337-42-libft/blob/master/resources/ft_printf.en.pdf)
 
-#### int  ft_printf_fd(int fd, const char \*format, ...);
+#### int&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ft_printf_fd(int fd, const char \*format, ...);
 It's the same thins as ft_printf but it has one more parameters.  
 ft_printf writes to the standard output, but ft_printf_fd writes to the given file descriptor (int fd).  
 
-#### int ft_nbrlen(int n)
-Returns how many characters it takes to print the given integer parameter.
+#### int&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ft_nbrlen(int n)
+Returns how many digits on the given integer parameter.
 
-#### int  ft_iswhitespace(int c);
-Return true is the given parameter is a white space : space OR '\t' OR '\n' OR '\v' OR '\f' OR '\r'.
+#### int&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ft_iswhitespace(int c);
+Return true is the given parameter is a white space : **space** OR **'\t'** OR **'\n'** OR **'\v'** OR **'\f'** OR **'\r'**.
 
-#### void ft_swap_pt(void \*\*pt1, void \*\*pt2);
+#### void&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ft_swap_pt(void \*\*pt1, void \*\*pt2);
 Swap the addresses of the given parameters.
 
-#### int  ft_sqrt(int nb);
+#### int&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ft_sqrt(int nb);
 Returns the integer square root of a number (if it exists), or
 0 if the square root is not an integer.
 
-#### char \*\*ft_strsplit_ws(char const \*s);
-Do the same thing as ft_strsplit, but this time the delimiter is one of the white spaces : space OR '\t' OR '\n' OR '\v' OR '\f' OR '\r'.
+#### char&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\*\*ft_strsplit_ws(char const \*s);
+Do the same thing as ft_strsplit, but this time the delimiter is one of the white spaces : **space** OR **'\t'** OR **'\n'** OR **'\v'** OR **'\f'** OR **'\r'**.
 
-#### void ft_revtab(void \*\*tab, int len);
+#### void&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ft_revtab(void \*\*tab, int len);
 Reverse the order of the addresses pointed by the given parameter \*\*tab.
 
-#### void ft_sorttab(void \*\*tab, int len, int (\*cmp)());
+#### void&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ft_sorttab(void \*\*tab, int len, int (\*cmp)());
 Applies the function cmp to each address pointed by given argument \*\*tab and sort it using the result of the return value.  
 the function cmp must be a function to compare the value pointed by two pointers.
 
-#### char \*\*ft_strtabdup(char \*\*tab);
+#### char&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\*\*ft_strtabdup(char \*\*tab);
 Allocates sufficient memory for a copy of the array of strings given as argument, does the copy, and returns a pointer to it.  
 The array of strings given as argument must finished with a NULL. (like the array returned by ft_strsplit).  
 The pointer may subsequently be used as an argument to the function ft_free_strtab(char \*\*tab).
 
-#### void ft_free_strtab(char \*\*tab);
-Deallocates the memory allocation pointed to by each string of the array given as argument.  
+#### void&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ft_free_strtab(char \*\*tab);
+Deallocates the memory allocation pointed to by each string of the array given as argument,  
+And deallocates the memory allocation pointed to by the array given as argument.
 The array of strings given as argument must finished with a NULL. (like the array returned by ft_strsplit).
 
-#### int  ft_strtablen(char \*\*tab);
+#### int&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ft_strtablen(char \*\*tab);
 Return the number of pointers stored in the array given as argument.  
 The array of strings given as argument must finished with a NULL. (like the array returned by ft_strsplit).

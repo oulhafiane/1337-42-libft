@@ -127,23 +127,57 @@ Iterates a list lst and applies the function f to each link to
 create a “fresh” list (using malloc(3)) resulting from the successive applications of f. If the allocation fails, the function returns NULL.
 
 ## Other Functions
-##### On every time i work on a new project i need to add some useful functions to my library
+##### Whenever i work on a new project, i need to add some useful functions to my library
 
-#### get_next_line
-Read from a file descriptor line by line.
-it's a project on my curriculum [click here for more info](https://github.com/oulhafiane/1337-42-libft/blob/master/get_next_line.en.pdf)
+#### int  get_next_line(const int fd, char \*\*line);
+Read from a file descriptor line by line.  
+It's a project on my curriculum [click here for more info](https://github.com/oulhafiane/1337-42-libft/blob/master/get_next_line.en.pdf)
 
-#### ft_printf
-I recoded the famous function called printf from the library stdio.h
-I managed the following conversions : sSpdDioOuUxXcC
-I managed the following flags : hh, h, l, ll, j, et z, #, 0, -, +, * and space
-it's a project on my curriculum [click here for more info](https://github.com/oulhafiane/1337-42-libft/blob/master/ft_printf.en.pdf)
+#### int  free_gnl(int fd); 
+Deallocates the allocated memory by get_next_line for the specific file descriptor given.
 
-#### ft_fprintf
-It's the same thins as ft_printf but it has one more parameters
-prototyped like this : ft_fprintf(int fd, const char *format, ...);
-ft_printf writes to the standard output, but ft_fprintf writes to the given file descriptor (int fd).
+#### int  ft_printf(const char \*format, ...);
+I recoded the famous function called printf from the library stdio.h.  
+I managed the following conversions : sSpdDioOuUxXcC.  
+I managed the following flags : hh, h, l, ll, j, et z, #, 0, -, +, * and space.  
+It's a project on my curriculum [click here for more info](https://github.com/oulhafiane/1337-42-libft/blob/master/ft_printf.en.pdf)
 
-#### free_gnl
-prototype : void  free_gnl(int fd)
-Free the static variable used by get_next_line to store the rest of the text read for the specific file descriptor given.
+#### int  ft_printf_fd(int fd, const char \*format, ...);
+It's the same thins as ft_printf but it has one more parameters.  
+ft_printf writes to the standard output, but ft_printf_fd writes to the given file descriptor (int fd).  
+
+#### int ft_nbrlen(int n)
+Returns how many characters it takes to print the given integer parameter.
+
+#### int  ft_iswhitespace(int c);
+Return true is the given parameter is a white space : space OR '\t' OR '\n' OR '\v' OR '\f' OR '\r'.
+
+#### void ft_swap_pt(void \*\*pt1, void \*\*pt2);
+Swap the addresses of the given parameters.
+
+#### int  ft_sqrt(int nb);
+Returns the integer square root of a number (if it exists), or
+0 if the square root is not an integer.
+
+#### char \*\*ft_strsplit_ws(char const \*s);
+Do the same thing as ft_strsplit, but this time the delimiter is one of the white spaces : space OR '\t' OR '\n' OR '\v' OR '\f' OR '\r'.
+
+#### void ft_revtab(void \*\*tab, int len);
+Reverse the order of the addresses pointed by the given parameter \*\*tab.
+
+#### void ft_sorttab(void \*\*tab, int len, int (\*cmp)());
+Applies the function cmp to each address pointed by given argument \*\*tab and sort it using the result of the return value.  
+the function cmp must be a function to compare the value pointed by two pointers.
+
+#### char \*\*ft_strtabdup(char \*\*tab);
+Allocates sufficient memory for a copy of the array of strings given as argument, does the copy, and returns a pointer to it.  
+The array of strings given as argument must finished with a NULL. (like the array returned by ft_strsplit).  
+The pointer may subsequently be used as an argument to the function ft_free_strtab(char \*\*tab).
+
+#### void ft_free_strtab(char \*\*tab);
+Deallocates the memory allocation pointed to by each string of the array given as argument.  
+The array of strings given as argument must finished with a NULL. (like the array returned by ft_strsplit).
+
+#### int  ft_strtablen(char \*\*tab);
+Return the number of pointers stored in the array given as argument.  
+The array of strings given as argument must finished with a NULL. (like the array returned by ft_strsplit).

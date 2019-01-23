@@ -1,2 +1,3 @@
 # 1337-42-libft
-The aim of this project is to code a C library regrouping usual functions that you’ll be allowed to use in all your other projects
+During my curriculum, it is forbidden to use pre-compiled functions, only some of them are allowed on each project, for example printf not authorized and all the functions of the string.h library.  
+Libft is the first project of the curriculum that requires in the first part to re-code a set of libc functions, as defined in their manual, and in the second part to code a set of functions that are not included in the libc and the bonus part to code certain functions to deal with the linked list, after that you can use this library for the following projects and you can also add more useful functions.

@@ -9,6 +9,8 @@ Libft is the first project of the curriculum that requires in the first part to 
 memset, bzero, memcpy, memccpy, memmove, memchr, memcmp, strlen, strdup, strcpy, strncpy, strcat, strncat, strlcat, strchr, strrchr, strstr, strnstr, strcmp, strncmp, atoi, isalpha, isdigit, isalnum, isascii, isprint, toupper, tolower.
 
 ## Second Part
+##### We must code the following functions : 
+
 #### ft_memalloc
 Allocates (with malloc(3)) and returns a “fresh” memory
 area. The memory allocated is initialized to 0. If the allocation fails, the function returns NULL.
@@ -89,3 +91,59 @@ Outputs the string s to the file descriptor fd.
 Outputs the string s to the file descriptor fd followed by a ’\n’.
 #### ft_putnbr_fd
 Outputs the integer n to the file descriptor fd.
+
+## Bonus Part
+##### We must code the following functions :  
+
+#### ft_lstnew
+Allocates (with malloc(3)) and returns a “fresh” link. The
+variables content and content_size of the new link are initialized by copy of the parameters of the function. If the parameter content is nul, the variable content is initialized to
+NULL and the variable content_size is initialized to 0 even
+if the parameter content_size isn’t. The variable next is
+initialized to NULL. If the allocation fails, the function returns
+NULL.
+#### ft_lstdelone
+Takes as a parameter a link’s pointer address and frees the
+memory of the link’s content using the function del given as
+a parameter, then frees the link’s memory using free(3). The
+memory of next must not be freed under any circumstance.
+Finally, the pointer to the link that was just freed must be
+set to NULL (quite similar to the function ft_memdel in the
+mandatory part).
+#### ft_lstdel
+Takes as a parameter the adress of a pointer to a link and
+frees the memory of this link and every successors of that link
+using the functions del and free(3). Finally the pointer to
+the link that was just freed must be set to NULL (quite similar
+to the function ft_memdel from the mandatory part).
+to be freed.
+Libft Your first own library
+#### ft_lstadd
+Adds the element new at the beginning of the list.
+#### ft_lstiter
+Iterates the list lst and applies the function f to each link.
+#### ft_lstmap
+Iterates a list lst and applies the function f to each link to
+create a “fresh” list (using malloc(3)) resulting from the successive applications of f. If the allocation fails, the function returns NULL.
+
+## Other Functions
+##### On every time i work on a new project i need to add some useful functions to my library
+
+#### get_next_line
+Read from a file descriptor line by line.
+it's a project on my curriculum [click here for more info](https://github.com/oulhafiane/1337-42-libft/blob/master/get_next_line.en.pdf)
+
+#### ft_printf
+I recoded the famous function called printf from the library stdio.h
+I managed the following conversions : sSpdDioOuUxXcC
+I managed the following flags : hh, h, l, ll, j, et z, #, 0, -, +, * and space
+it's a project on my curriculum [click here for more info](https://github.com/oulhafiane/1337-42-libft/blob/master/ft_printf.en.pdf)
+
+#### ft_fprintf
+It's the same thins as ft_printf but it has one more parameters
+prototyped like this : ft_fprintf(int fd, const char *format, ...);
+ft_printf writes to the standard output, but ft_fprintf writes to the given file descriptor (int fd).
+
+#### free_gnl
+prototype : void  free_gnl(int fd)
+Free the static variable used by get_next_line to store the rest of the text read for the specific file descriptor given.

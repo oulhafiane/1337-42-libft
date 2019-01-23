@@ -6,7 +6,7 @@
 /*   By: zoulhafi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/22 17:24:38 by zoulhafi          #+#    #+#             */
-/*   Updated: 2019/01/23 12:34:51 by zoulhafi         ###   ########.fr       */
+/*   Updated: 2019/01/23 13:21:13 by zoulhafi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -145,7 +145,6 @@ int					ft_nbrlen(int n);
 int					ft_iswhitespace(int c);
 void				ft_swap_pt(void **pt1, void **pt2);
 int					ft_sqrt(int nb);
-void				ft_free_protected(void *tofree);
 
 /*
 ** Functions Created To Create Printf

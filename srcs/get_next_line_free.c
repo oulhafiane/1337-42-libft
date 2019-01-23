@@ -6,7 +6,7 @@
 /*   By: zoulhafi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/22 17:37:55 by zoulhafi          #+#    #+#             */
-/*   Updated: 2019/01/22 17:46:31 by zoulhafi         ###   ########.fr       */
+/*   Updated: 2019/01/23 13:22:25 by zoulhafi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,7 @@ void		free_gnl(int fd)
 	{
 		if (tmp->fd == fd)
 		{
-			ft_free_protected(tmp->tmp);
+			free(tmp->tmp);
 			if (previous == NULL)
 				*lst = tmp->next;
 			else

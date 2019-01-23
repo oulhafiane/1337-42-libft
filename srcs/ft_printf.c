@@ -6,7 +6,7 @@
 /*   By: zoulhafi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/30 19:04:39 by zoulhafi          #+#    #+#             */
-/*   Updated: 2019/01/16 23:18:19 by zoulhafi         ###   ########.fr       */
+/*   Updated: 2019/01/23 13:26:47 by zoulhafi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,7 +86,7 @@ static int	my_printf(int fd, const char *format, va_list ap)
 	return (count);
 }
 
-int			ft_fprintf(int fd, const char *format, ...)
+int			ft_printf_fd(int fd, const char *format, ...)
 {
 	va_list		ap;
 	int			ret;

@@ -6,7 +6,7 @@
 /*   By: zoulhafi <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/01 18:35:42 by zoulhafi          #+#    #+#             */
-/*   Updated: 2019/01/22 17:46:49 by zoulhafi         ###   ########.fr       */
+/*   Updated: 2019/01/23 13:22:08 by zoulhafi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,6 @@ void	free_printf(va_list *ap)
 
 	va_end(*ap);
 	s = get_static_str();
-	ft_free_protected(*s);
+	free(*s);
 	*s = NULL;
 }
